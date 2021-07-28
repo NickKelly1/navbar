@@ -2,7 +2,7 @@
 
 A simple html js css navbar based on the video [Animated Responsive Navbar with CSS](https://youtu.be/biOMz4puGt8), by Fireship.
 
-Visit the [live demo](navbar.nickkelly.dev).
+Visit the [live demo](https://nickkelly1.github.io/navbar/).
 
 ![screenshot 1](./screenshot1.jpg)
 ![screenshot 2](./screenshot2.jpg)

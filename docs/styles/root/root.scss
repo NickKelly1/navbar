@@ -1,0 +1,51 @@
+@import '../variables/variables';
+
+:root {
+  --font-size: #{$font-size};
+  --font-family: #{$font-family};
+
+  // themes
+  // sandy
+  --theme-sandy-text-primary: rgb(#{$theme-sandy-text-primary-rgb});
+  --theme-sandy-text-secondary: rgb(#{$theme-sandy-text-secondary-rgb});
+  --theme-sandy-bg-primary: rgb(#{$theme-sandy-bg-primary-rgb});
+  --theme-sandy-bg-secondary: rgb(#{$theme-sandy-bg-secondary-rgb});
+
+  // theme
+  --text-primary: var(--theme-sandy-text-primary);
+  --text-secondary: var(--theme-sandy-text-secondary);
+  --bg-primary: var(--theme-sandy-bg-primary);
+  --bg-secondary: var(--theme-sandy-bg-secondary);
+
+  --navbar-width-drawer: #{$navbar-width-drawer};
+  --navbar-width-extended: #{$navbar-width-extended};
+  --navbar-icon-size: #{$navbar-icon-size};
+
+  --transition-speed: 600ms;
+
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--text-secondary);
+  background-color: var(--bg-secondary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}

@@ -1,8 +1,66 @@
-<html>
-  <head>
-    <title>NavBar</title>
-  </head>
-  <body>
-    <div>hello world</div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/root/root.css"/>
+  <link rel="stylesheet" href="styles/nav/nav.css"/>
+  <link rel="stylesheet" href="styles/layout/layout.css"/>
+  <link rel="stylesheet" href="styles/main/main.css"/>
+  <title>Navbar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script type="module" src="index.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" data-icon="home" href="#home">
+            <span class="nav__text">
+              Home
+            </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-icon="moon" href="#cat">
+            <span class="nav__text">
+              Moon
+            </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-icon="cat" href="#cat">
+            <span class="nav__text">
+              Cat
+            </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-icon="rocket" href="#planet">
+            <span class="nav__text">
+              Rocket
+            </span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" data-icon="virus" href="#rocket">
+            <span ></span>
+            <span class="nav__text">
+              Virus
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="main">
+    </main>
+  </div>
+</body>
 </html>

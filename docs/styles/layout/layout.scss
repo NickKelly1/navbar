@@ -1,0 +1,10 @@
+@import '../variables/variables';
+
+.layout {
+  display: grid;
+  grid-template-areas: "nav item";
+
+  // @media (min-width: $breakpoint) {
+  //   .hello { background-color: red; }
+  // }
+}

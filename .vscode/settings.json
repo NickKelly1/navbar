@@ -1,0 +1,11 @@
+{
+  "liveSassCompile.settings.autoprefix": null,
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+    "docs/styles/variables",
+  ],
+  "liveServer.settings.mount": [
+      ["/", "./docs",],
+  ],
+}

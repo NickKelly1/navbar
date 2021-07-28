@@ -1,0 +1,7 @@
+.main {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  margin-left: var(--navbar-width-drawer);
+  padding: 0 1rem;
+}
+/*# sourceMappingURL=main.css.map */

@@ -15,11 +15,7 @@
   stroke: var(--text-secondary);
 }
 
-.nav:hover {
-  height: var(--navbar-width-extended);
-}
-
-@media (min-width: 50rem) {
+@media only screen and (min-width: 50rem) {
   .nav {
     transition: width 200ms ease;
     top: 0;
@@ -44,7 +40,7 @@
   height: var(--navbar-width-extended);
 }
 
-@media (min-width: 50rem) {
+@media only screen and (min-width: 50rem) {
   .nav__list {
     flex-direction: column;
     height: 100%;
@@ -52,12 +48,53 @@
   }
 }
 
+.nav__logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  margin-right: 1rem;
+}
+
+@media only screen and (min-width: 50rem) {
+  .nav__logo {
+    height: unset;
+    width: 100%;
+    margin-right: unset;
+    margin-bottom: 1rem;
+  }
+}
+
+.nav__logo .svg__icon {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+@media only screen and (min-width: 50rem) {
+  .nav:hover .nav__logo .svg__icon {
+    transform: rotate(-180deg);
+  }
+}
+
 .nav__item {
-  width: 100%;
+  height: 100%;
 }
 
 .nav__item:last-child {
-  margin-top: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 50rem) {
+  .nav__item {
+    height: unset;
+    width: 100%;
+  }
+  .nav__item:last-child {
+    margin-left: unset;
+    margin-top: auto;
+  }
 }
 
 .nav__link {
@@ -65,13 +102,13 @@
   align-items: center;
   text-decoration: none;
   color: unset;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: var(--navbar-width-drawer);
   filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
 }
 
-@media (min-width: 50rem) {
+@media only screen and (min-width: 50rem) {
   .nav__link {
     flex-direction: row;
     width: 100%;
@@ -84,7 +121,13 @@
   filter: grayscale(0%) opacity(1);
 }
 
-.nav__icon {
+@media only screen and (min-width: 50rem) {
+  .nav:hover .nav__logo .nav__link {
+    flex-direction: row-reverse;
+  }
+}
+
+.svg__icon {
   height: var(--navbar-icon-size);
   width: var(--navbar-icon-size);
   margin: calc((var(--navbar-width-drawer) - var(--navbar-icon-size)) / 2);
@@ -93,10 +136,19 @@
 
 .nav__text {
   display: none;
-  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
-.nav:hover .nav__text {
-  display: block;
+@media only screen and (min-width: 50rem) {
+  .nav__text {
+    margin-bottom: unset;
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 50rem) {
+  .nav:hover .nav__text {
+    display: block;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

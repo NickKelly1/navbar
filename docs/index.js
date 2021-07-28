@@ -22,7 +22,7 @@ $('[data-icon]').each(async (_, container) => {
     .then(svgDocument => {
       $(svgDocument)
         .find('svg')
-        .addClass('nav__icon')
+        .addClass('svg__icon')
         .prependTo(container);
     })
     .catch(error => {

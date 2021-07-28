@@ -1,7 +1,14 @@
 .main {
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
-  margin-left: var(--navbar-width-drawer);
   padding: 0 1rem;
+  margin-bottom: var(--navbar-width-drawer);
+}
+
+@media (min-width: 50rem) {
+  .main {
+    margin-bottom: unset;
+    margin-left: var(--navbar-width-drawer);
+  }
 }
 /*# sourceMappingURL=main.css.map */

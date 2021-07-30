@@ -8,21 +8,27 @@ Visit the [live demo 🚀](https://nickkelly1.github.io/navbar/).
 
 ## Development
 
+### Technologies
+
+This project uses TypeScript and Webpack
+
 Project Structure
 
-```txt
-- d: docs (public folder to be served)
-  - d: icons (free svg icons from font awesome)
-  - d: styles (sass & css)
-  - f: index.html
-  - f: index.js
-  - f: jsconfig.json (IDE JavaScript configuration for the project)
-  - f: text.txt (blob of ipsum text to be loaded)
-```
+### Getting started
 
-### Local Development
+1. Clone the repository `git clone git@github.com:NickKelly1/navbar.git`
+2. Enter the project `cd navbar`
+3. Install dependencies `npm install`
+4. To serve a development build from a realoading dev server, run `npm run dev`
 
-To develop locally:
+### Publishing
 
-1. Compile the `.scss` files to `.css`. If using Visual Studio Code I recommend the [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) extension.
-2. Serve the `docs` folder. If using Visual Studio Code I recommend the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
+The site is hosted on GitHub pages.
+
+GitHub will serve the master branches `/docs` directory.
+
+To compile a new production build, run `npm run build:prod`. Webpack will compile a production build into `/docs` and GitHub pages will serve it.
+
+### Notes
+
+The projects webpack config file is written in TypeScript. If running the development server, any changes to the webpack config will require restarting the server to compile the latest webpack config changes.

@@ -1,7 +1,19 @@
 {
   "name": "navbar",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple html css js navbar",
+  "author": "Nick Kelly",
+  "license": "Mozilla Public License Version 2.0",
+  "homepage": "https://github.com/NickKelly1/navbar#readme",
+  "readme": "https://github.com/NickKelly1/navbar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NickKelly1/navbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NickKelly1/navbar/issues"
+  },
+  "keywords": ["JavaScript", "TypeScript"],
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,9 +23,6 @@
     "build:prod": "npm run prepare && webpack --config config/webpack.config.js --env mode=production --progress --color",
     "dev": "npm run prepare && webpack serve --config config/webpack.config.js --env mode=development --color"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "jquery": "^3.6.0"
   },

@@ -3,12 +3,18 @@
 // TO BE EXTENDED
 
 {
+  "ts-node": {
+    "transpileOnly": true,
+    "moduleTypes": {
+      "config/**/*": "cjs",
+    },
+  },
   // tsc ide file
   "compilerOptions": {
     "target": "ES2019",                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */
     "module": "ES6",                           /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
     "sourceMap": true,                           /* Generates corresponding '.map' file. */
-    "rootDir": "src",
+    // "rootDir": "src",
     "outDir": "docs",                              /* Redirect output structure to the directory. */
     "strict": true,                                 /* Enable all strict type-checking options. */
     "allowSyntheticDefaultImports": true,        /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
@@ -21,6 +27,7 @@
   "include": [
     "src/*",
     "src/**/*",
+    "config",
     // "src/pages/**/*",
     "src/custom.d.ts"
   ]

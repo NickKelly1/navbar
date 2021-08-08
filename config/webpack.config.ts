@@ -31,8 +31,8 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
       contentBase: absolute('./docs'),
       compress: true,
       port: 4000,
-      hot: true,
-      inline: true,
+      // hot: true,
+      // inline: true,
     };
   }
 
@@ -42,9 +42,8 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
 
   const output: webpack.Configuration['output'] = {
     path: absolute('./docs'),
-    filename: mode === 'production'
-      ? '[name].[contenthash].bundle.js'
-      : '[name].bundle.js',
+    filename: '[name].[contenthash].js',
+    clean: true,
   };
 
   let devtool: webpack.Configuration['devtool'] = undefined;
@@ -114,7 +113,9 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
   };
 
   const plugins = [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new CopyWebpackPlugin({
       patterns: [{
         from: absolute('./static'),
@@ -123,10 +124,8 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
-      chunks: ['index'],
       template: absolute('./src/index.html'),
       showErrors: true,
-      hash: true, // @note: not necessary with contenthash
       filename: '[name].html',
       minify: mode === 'production'
         ? {
@@ -145,6 +144,12 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
     }),
   ];
 
+  const optimization: webpack.Configuration['optimization'] = {
+    splitChunks: {
+      //
+    },
+  };
+
   const result: webpack.Configuration = {
     mode,
     devServer,
@@ -154,6 +159,7 @@ const config = async (env: Env): Promise<webpack.Configuration> => {
     module,
     resolve,
     plugins,
+    optimization,
   } as webpack.Configuration;
 
   return result;
